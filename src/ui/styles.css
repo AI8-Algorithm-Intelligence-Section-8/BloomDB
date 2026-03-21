@@ -1,0 +1,330 @@
+/* BloomDB IDE Styles */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: #2d2d30;
+    padding: 10px 20px;
+    border-bottom: 1px solid #3e3e42;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.header h1 {
+    color: #61dafb;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.header-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.header-controls button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.header-controls button:hover {
+    background-color: #005a9e;
+}
+
+/* Main content layout */
+.main-content {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    background-color: #252526;
+    border-right: 1px solid #3e3e42;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.sidebar-section {
+    padding: 15px;
+    border-bottom: 1px solid #3e3e42;
+}
+
+.sidebar-section h3 {
+    color: #cccccc;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* Component palette */
+.component-palette {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.component {
+    background-color: #37373d;
+    border: 1px solid #454545;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: grab;
+    transition: all 0.2s;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.component:hover {
+    background-color: #404040;
+    border-color: #61dafb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(97, 218, 251, 0.2);
+}
+
+.component:active {
+    cursor: grabbing;
+}
+
+.component::before {
+    content: "⚙️";
+    margin-right: 8px;
+}
+
+/* AI Panel */
+#ai-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#ai-suggestions {
+    background-color: #1e1e1e;
+    border: 1px solid #3e3e42;
+    border-radius: 4px;
+    padding: 10px;
+    min-height: 100px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 0.85em;
+}
+
+#ai-suggestions p {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #2d2d30;
+    border-radius: 3px;
+}
+
+#ai-query {
+    background-color: #3c3c3c;
+    border: 1px solid #454545;
+    border-radius: 4px;
+    padding: 8px;
+    color: #f0f0f0;
+    font-size: 0.9em;
+}
+
+#ai-query:focus {
+    outline: none;
+    border-color: #61dafb;
+}
+
+#ask-ai {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+#ask-ai:hover {
+    background-color: #218838;
+}
+
+/* Canvas container */
+.canvas-container {
+    flex: 1;
+    background-color: #1e1e1e;
+    position: relative;
+    overflow: hidden;
+}
+
+#pipeline-canvas {
+    background-color: #1e1e1e;
+    border: 1px solid #3e3e42;
+    cursor: crosshair;
+}
+
+/* Properties panel */
+.properties-panel {
+    width: 300px;
+    background-color: #252526;
+    border-left: 1px solid #3e3e42;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.properties-panel h3 {
+    color: #cccccc;
+    padding: 15px;
+    border-bottom: 1px solid #3e3e42;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+#properties-content {
+    padding: 15px;
+    flex: 1;
+}
+
+/* Component styling on canvas */
+.component-on-canvas {
+    position: absolute;
+    background: linear-gradient(135deg, #61dafb 0%, #21b4d6 100%);
+    border: 2px solid #4fc3f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(97, 218, 251, 0.3);
+    transition: all 0.2s;
+}
+
+.component-on-canvas:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(97, 218, 251, 0.4);
+}
+
+.component-on-canvas.selected {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.3);
+}
+
+.component-label {
+    padding: 8px 12px;
+    color: #1e1e1e;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Port styling */
+.port {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #1e1e1e;
+    transition: all 0.2s;
+}
+
+.port.input {
+    background-color: #ff6b6b;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.port.output {
+    background-color: #51cf66;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.port:hover {
+    transform: scale(1.2);
+}
+
+/* Connection lines */
+.connection {
+    position: absolute;
+    pointer-events: none;
+    stroke: #61dafb;
+    stroke-width: 3;
+    fill: none;
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .sidebar, .properties-panel {
+        width: 250px;
+    }
+}
+
+@media (max-width: 900px) {
+    .sidebar, .properties-panel {
+        width: 200px;
+    }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #454545;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    background-color: #2d2d30;
+    color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    pointer-events: none;
+    z-index: 1000;
+    border: 1px solid #454545;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}

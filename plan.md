@@ -3,59 +3,77 @@
 ## Overview
 BloomDB is now designed as an AI-integrated Integrated Development Environment (IDE) specifically for probabilistic database development and AI-assisted probabilistic programming. This IDE will address serious pain points in ML/AI/data science by providing intelligent tools for handling uncertainty, probabilistic modeling, and scalable computations.
 
-## What is an AI-Integrated IDE?
-An AI-integrated IDE combines traditional development environment features (code editing, debugging, project management) with artificial intelligence capabilities:
-- **Intelligent Code Completion**: Context-aware suggestions for probabilistic operations
-- **Automated Probabilistic Modeling**: AI-assisted generation of probabilistic queries and models
-- **Uncertainty Analysis Tools**: Built-in visualization and analysis of probabilistic data
-- **AI-Powered Debugging**: Intelligent error detection and correction for probabilistic code
-- **Integration with ML Frameworks**: Seamless connection to popular AI/ML libraries
+## What is BloomDB IDE?
+BloomDB IDE combines traditional IDE features with AI-powered tools specifically for probabilistic data pipelines and management:
 
-### BloomDB IDE's Unique Focus
-- Specialized for probabilistic databases and programming
-- AI assistance tailored to uncertainty handling and probabilistic reasoning
-- Tools for scalable probabilistic computations and inference
-- Integration with existing database systems for probabilistic extensions
+### Core Components
+- **Pipeline Designer**: Visual drag-and-drop interface for building probabilistic data pipelines
+- **AI Assistant**: Intelligent suggestions for probabilistic transformations, uncertainty handling, and optimization
+- **Data Quality Manager**: Automated detection and correction of data quality issues with probabilistic methods
+- **Performance Optimizer**: AI-driven optimization of pipeline performance and scalability
+- **Uncertainty Visualizer**: Interactive tools for exploring and understanding data uncertainty
+- **Integration Hub**: Connectors for various data sources, ML frameworks, and probabilistic databases
 
-## Existing Serious Pain Points in ML/AI/Data Science Markets
+### Unique Focus Areas
+- Probabilistic data ingestion and transformation pipelines
+- Uncertainty propagation through data workflows
+- Scalable probabilistic computations in distributed environments
+- AI-assisted pipeline debugging and optimization
+- Integration with existing data infrastructure for probabilistic extensions
+
+## How BloomDB IDE Addresses Existing Pain Points
 
 ### 1. Scalability of Probabilistic Computations
-- **Problem**: Possible worlds semantics leads to exponential complexity; existing systems like MayBMS struggle with large datasets
-- **Solution**: BloomDB's efficient representation and query optimization for probabilistic data
+- **Problem**: Exponential complexity in possible worlds
+- **IDE Solution**: AI-assisted optimization suggestions, visual complexity analysis, scalable code generation
 
 ### 2. Uncertainty Quantification in ML Models
-- **Problem**: ML models produce point estimates, but real-world applications need confidence intervals and uncertainty measures
-- **Solution**: Native probabilistic operators for model uncertainty, Bayesian inference support
+- **Problem**: Lack of built-in uncertainty handling
+- **IDE Solution**: Intelligent code completion for probabilistic operators, uncertainty visualization tools, automated model validation
 
 ### 3. Data Quality and Missing Values
-- **Problem**: Sensor data, IoT streams, and real-time data often have missing or uncertain values; traditional imputation methods are inadequate
-- **Solution**: Probabilistic data model with built-in handling of incomplete information
+- **Problem**: Inadequate handling of incomplete data
+- **IDE Solution**: AI-powered data imputation suggestions, probabilistic data profiling, quality metrics dashboard
 
-### 4. Integration with Existing Database Systems
-- **Problem**: No commercial probabilistic databases; hard to integrate probabilistic features into SQL-based systems
-- **Solution**: BloomDB as a query language that can extend or interface with existing databases
+### 4. Integration with Existing Systems
+- **Problem**: Difficulty integrating probabilistic features
+- **IDE Solution**: Database connector wizards, SQL-to-probabilistic translation, API integration assistants
 
 ### 5. Probabilistic Inference on Big Data
-- **Problem**: Performing Bayesian inference or probabilistic reasoning on large-scale data is computationally expensive
-- **Solution**: Optimized execution engine for probabilistic operations and aggregations
+- **Problem**: Computational expense of inference
+- **IDE Solution**: Performance profiling for probabilistic code, distributed computing suggestions, optimization hints
 
 ### 6. Explainability and Interpretability
-- **Problem**: Probabilistic models are often "black boxes"; need ways to explain uncertainty in predictions
-- **Solution**: Query capabilities to explore and visualize probabilistic relationships
+- **Problem**: Black-box probabilistic models
+- **IDE Solution**: Interactive visualization of probabilistic relationships, explanation generation, uncertainty exploration tools
 
-## Architecture Overview
+## IDE Architecture for Probabilistic Data Pipelines
 
 ```mermaid
 graph TD
-    A[User Input] --> B[Parser]
-    B --> C[AST]
-    C --> D[Interpreter/Compiler]
-    D --> E[Probabilistic Engine]
-    E --> F[Data Storage]
-    F --> G[Query Results]
+    A[Data Engineer/ML Engineer] --> B[BloomDB IDE]
     
-    H[Probabilistic Data Model] --> F
-    I[Possible Worlds Semantics] --> E
+    B --> C[Pipeline Designer]
+    B --> D[AI Assistant]
+    B --> E[Data Quality Manager]
+    B --> F[Uncertainty Visualizer]
+    B --> G[Integration Hub]
+    
+    C --> H[Visual Pipeline Builder]
+    C --> I[Probabilistic Operators]
+    D --> J[Transformation Suggestions]
+    D --> K[Optimization Hints]
+    E --> L[Quality Metrics]
+    E --> M[Imputation Strategies]
+    F --> N[Uncertainty Flow Diagrams]
+    F --> O[Confidence Visualizations]
+    G --> P[Database Connectors]
+    G --> Q[ML Framework Integrations]
+    
+    R[Data Sources] --> G
+    G --> S[Probabilistic Data Store]
+    S --> T[Pipeline Execution Engine]
+    T --> U[Results/Dashboard]
 ```
 
 ## Development Phases

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloomDB IDE</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <h1>BloomDB IDE</h1>
+            <div class="header-controls">
+                <button id="new-pipeline">New Pipeline</button>
+                <button id="load-pipeline">Load Pipeline</button>
+                <button id="save-pipeline">Save Pipeline</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Pipeline Components</h3>
+                    <div class="component-palette">
+                        <div class="component" draggable="true" data-type="data-source">Data Source</div>
+                        <div class="component" draggable="true" data-type="probabilistic-filter">Probabilistic Filter</div>
+                        <div class="component" draggable="true" data-type="uncertainty-aggregator">Uncertainty Aggregator</div>
+                        <div class="component" draggable="true" data-type="ai-suggester">AI Suggester</div>
+                        <div class="component" draggable="true" data-type="data-sink">Data Sink</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>AI Assistant</h3>
+                    <div id="ai-panel">
+                        <div id="ai-suggestions"></div>
+                        <input type="text" id="ai-query" placeholder="Ask for probabilistic suggestions...">
+                        <button id="ask-ai">Ask AI</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="pipeline-canvas" width="800" height="600"></canvas>
+            </div>
+
+            <div class="properties-panel">
+                <h3>Properties</h3>
+                <div id="properties-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
