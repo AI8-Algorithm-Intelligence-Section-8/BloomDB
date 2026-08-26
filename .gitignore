@@ -16,3 +16,23 @@ contacts.csv
 leads.csv
 prospects.csv
 # --- end kuro-rules private research ---
+
+# Rule 76 added session protection
+validation_evidence.md
+decision-memo.md
+hn_scraper.py
+ROADMAP.md
+PLAN.md
+
+docs/strategy/
+exports/
+sync_summary.py
+
+automate_l2.py
+landing_page.html
+landing_deploy/
+docs/community_post_template.md
+docs/v0_landing_page_prompt.md
+
+# kuro-guard R76 (auto)
+acquisition_tracker.md
